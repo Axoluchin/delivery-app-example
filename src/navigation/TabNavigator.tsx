@@ -8,7 +8,10 @@ const Tab = createBottomTabNavigator()
 const TabNavigator = () => (
   <Tab.Navigator
     screenOptions={{
-      headerShown: false
+      headerShown: false,
+      tabBarLabelStyle: {
+        fontFamily: 'Montserrat-Regular'
+      }
     }}
   >
     <Tab.Screen
