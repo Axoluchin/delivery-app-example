@@ -9,6 +9,10 @@ export const HeadLine = ({ children, style }: TextProps) => (
   <Text style={[styles.headLine, style]}>{children}</Text>
 )
 
+export const SubHeadLine = ({ children, style }: TextProps) => (
+  <Text style={[styles.subHeadLine, style]}>{children}</Text>
+)
+
 export const Paragraph = ({ children, style }: TextProps) => (
   <Text style={[styles.paragraph, style]}>{children}</Text>
 )
@@ -19,6 +23,10 @@ const styles = StyleSheet.create({
     fontSize: 32
   },
   headLine: {
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 28
+  },
+  subHeadLine: {
     fontFamily: 'Montserrat-Medium',
     fontSize: 24
   },
