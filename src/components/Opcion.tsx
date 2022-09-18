@@ -3,6 +3,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 
 import { SubHeadLine } from './Text'
 import OpcionProps from '../types/components/OpcionProps'
+import colors from '../utils/colors'
 
 const Opcion = ({ action, title }: OpcionProps) => (
   <TouchableOpacity style={style.container} onPress={action}>
@@ -16,9 +17,10 @@ export default Opcion
 const style = StyleSheet.create({
   container: {
     padding: 8,
-    marginVertical: 4,
+    paddingVertical: 16,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: colors.white
   }
 })

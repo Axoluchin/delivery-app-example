@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, View } from 'react-native'
+import { SafeAreaView, StyleSheet, View, ScrollView } from 'react-native'
 
 import PhotoCircle from '../components/PhotoCircle'
 import { HeadLine } from '../components/Text'
@@ -17,10 +17,12 @@ const Account = () => (
         />
         <HeadLine style={style.name}>Neko Arc</HeadLine>
       </View>
-      <Opcion action={() => {}} title="Informacion de mi perfil" />
-      <Opcion action={() => {}} title="Mis Compras" />
-      <Opcion action={() => {}} title="Configuracion" />
-      <Opcion action={() => {}} title="Cerrar Sesion" />
+      <ScrollView>
+        <Opcion action={() => {}} title="Informacion de mi perfil" />
+        <Opcion action={() => {}} title="Mis Compras" />
+        <Opcion action={() => {}} title="Configuracion" />
+        <Opcion action={() => {}} title="Cerrar Sesion" />
+      </ScrollView>
     </SafeAreaView>
   </>
 )
@@ -39,9 +41,7 @@ const style = StyleSheet.create({
     borderBottomRightRadius: 32
   },
   photo: {
-    alignSelf: 'center',
-    borderWidth: 4,
-    borderColor: colors.green2
+    alignSelf: 'center'
   },
   name: {
     textAlign: 'center',
